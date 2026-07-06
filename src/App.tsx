@@ -1,5 +1,7 @@
+import AppRouter from './routes/Approuter';
+
 function App() {
-  return <h1>Expense Tracker</h1>;
+  return <AppRouter />;
 }
 
 export default App;
