@@ -9,7 +9,7 @@ export default function Topbar() {
     >
       <Toolbar>
         <Typography variant="h6">
-          SpendWise
+          Expense Tracker
         </Typography>
       </Toolbar>
     </AppBar>
