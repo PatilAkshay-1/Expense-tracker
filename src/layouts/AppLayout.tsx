@@ -6,13 +6,22 @@ import Topbar from "../components/layout/Topbar";
 
 export default function AppLayout() {
   return (
-    <Box sx={{ display: "flex", height: "100vh" }}>
-      <Sidebar />
+    <Box sx={{ display: "flex", height: "100vh", flexDirection: "column" }}>
+      <Topbar />
 
-      <Box sx={{ flex: 1 }}>
-        <Topbar />
 
-        <Box sx={{ p: 3 }}>
+      <Box sx={{ display: "flex", flex: 1 }}>
+        <Sidebar />
+
+        <Box
+          component="main"
+          sx={{
+            flex: 1,
+            p: 4,
+            overflow: "auto",
+            backgroundColor: "#f5f7fb",
+          }}
+        >
           <Outlet />
         </Box>
       </Box>
