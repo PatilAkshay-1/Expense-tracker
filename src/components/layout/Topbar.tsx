@@ -1,5 +1,7 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import { AccountBalanceWallet } from "@mui/icons-material";
+import { SignOutButton } from "@clerk/clerk-react";
+import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import "./topbar.scss";
 
 export default function Topbar() {
@@ -20,6 +22,15 @@ export default function Topbar() {
         <Typography variant="h6" className="logo">
           Expense Tracker
         </Typography>
+         <SignOutButton>
+          <Button
+            startIcon={<LogoutRoundedIcon />}
+            variant="outlined"
+            sx={{ ml: "auto" }}
+          >
+            Logout
+          </Button>
+        </SignOutButton>
       </Toolbar>
     </AppBar>
   );
