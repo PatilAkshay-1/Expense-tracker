@@ -1,4 +1,6 @@
 import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AccountBalanceWallet } from "@mui/icons-material";
+import "./topbar.scss";
 
 export default function Topbar() {
   return (
@@ -6,9 +8,16 @@ export default function Topbar() {
       position="static"
       elevation={1}
       color="inherit"
+      className="topbar"
     >
-      <Toolbar>
-        <Typography variant="h6">
+      <Toolbar sx={{ height: 72, display: "flex", gap: 2 }}>
+        <AccountBalanceWallet
+          color="primary"
+          sx={{
+            fontSize: 32,
+          }}
+        />
+        <Typography variant="h6" className="logo">
           Expense Tracker
         </Typography>
       </Toolbar>

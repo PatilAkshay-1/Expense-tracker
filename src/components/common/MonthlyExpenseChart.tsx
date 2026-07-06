@@ -31,9 +31,12 @@ export default function MonthlyExpenseChart({ data }: MonthlyExpenseChartProps) 
                 height: "100%",
             }}>
             <CardContent sx={{
-                p: 3,
+                p: 2,
             }}>
-                <Typography variant="h6" gutterBottom>
+                <Typography variant="h6" gutterBottom sx={{
+                    fontWeight: 600,
+                    mb: 2,
+                }}>
                     Monthly Expenses
                 </Typography>
                 <ResponsiveContainer width="100%" height={300}>
@@ -43,7 +46,7 @@ export default function MonthlyExpenseChart({ data }: MonthlyExpenseChartProps) 
                         <YAxis dataKey="amount" />
                         <Tooltip />
                         <Legend />
-                        <Bar dataKey="amount" fill="#8884d8" />
+                        <Bar dataKey="amount" fill="#1EA454" />
                     </BarChart>
                 </ResponsiveContainer>
             </CardContent>

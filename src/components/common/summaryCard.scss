@@ -1,0 +1,43 @@
+.summaryCard{
+    height: 100%;
+    border-radius: 20px !important;
+    transition:
+        transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .summaryCardContent{
+        padding: 24px !important;   // MUI spacing 3 = 24px
+        margin-left: 16px;
+
+        .cardContent{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+
+            .icon{
+                margin-right: 16px;
+                display: flex;
+                align-items: center;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                justify-content: center;
+            }
+
+            .cardTitle{
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        .cardValue{
+            margin-top: 8px;
+            font-size: 24px;
+            font-weight: 700;
+            justify-content: flex-start;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.sidebar {
+    .sidebar-item {
+        margin: 6px 12px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 12px;
+
+        &:hover {
+            background-color: #EBF8F1 !important;
+            color: #1EA454 !important;
+            cursor: pointer;
+
+            .MuiTypography-root {
+                font-weight: 700;
+            }
+
+            svg {
+                color: #1EA454;
+            }
+        }
+    }
+}

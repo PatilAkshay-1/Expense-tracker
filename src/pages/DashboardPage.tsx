@@ -2,23 +2,31 @@ import { Box, Grid, Typography } from "@mui/material";
 import SummaryCard from "../components/common/SummaryCard";
 import RecentTransactions from "../components/common/RecentTransactions";
 import MonthlyExpenseChart from "../components/common/MonthlyExpenseChart";
+import AccountBalanceRoundedIcon from '@mui/icons-material/AccountBalanceRounded';
+import ArrowCircleUpRoundedIcon from '@mui/icons-material/ArrowCircleUpRounded';
+import ArrowCircleDownRoundedIcon from '@mui/icons-material/ArrowCircleDownRounded';
+import SavingsRoundedIcon from '@mui/icons-material/SavingsRounded';
 
 const summaryCards = [
   {
     title: "Balance",
     value: "₹45,000",
+    icon: <AccountBalanceRoundedIcon />,
   },
   {
     title: "Income",
     value: "₹80,000",
+    icon: <ArrowCircleUpRoundedIcon />,
   },
   {
     title: "Expenses",
     value: "₹35,000",
+    icon: <ArrowCircleDownRoundedIcon />,
   },
   {
     title: "Savings",
     value: "₹45,000",
+    icon: <SavingsRoundedIcon />,
   },
 ];
 const transactions = [
@@ -58,8 +66,9 @@ const monthlyExpenses = [
 ];
 
 export default function DashboardPage() {
-  return (<>
-    <Typography variant="h4" sx={{ mb: 4, fontWeight: 700 }}>Dashboard</Typography>
+  return (
+  <>
+    <Typography variant="h4" sx={{ mb: 2, fontWeight: 600 }}>Dashboard</Typography>
     <Grid container spacing={3}>
       {summaryCards.map((card) => (
         <Grid key={card.title} size={{
@@ -67,7 +76,7 @@ export default function DashboardPage() {
           sm: 6,
           md: 3,
         }}>
-          <SummaryCard title={card.title} value={card.value} />
+          <SummaryCard title={card.title} value={card.value} icon={card.icon} />
         </Grid>
       ))}
     </Grid>
